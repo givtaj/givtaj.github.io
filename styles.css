@@ -67,6 +67,8 @@ h2 { margin: 2rem 0 1.25rem; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 
 .daedlo-preview { background: #21352b; }
 .daedlo-preview > img:first-child { object-position: 50% 45%; }
 .preview .save-screen { position: absolute; inset: 0; object-fit: contain; background: #20332b; opacity: 0; }
+.lesson-link { display: block; text-decoration: none; }
+.lesson-link:is(:hover, :focus-visible) h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
 .runtime-preview { background: #101e22; }
 .runtime-preview img { object-fit: contain; }
 @media (hover: hover) {
@@ -89,7 +91,7 @@ h3 a:hover, h3 a:focus-visible { text-decoration: underline; text-decoration-thi
 code { font-family: ui-monospace, monospace; font-size: .9em; color: var(--text); }
 
 footer { border-top: 1px solid var(--line); padding: 1.75rem 0 2.75rem; }
-.stack { display: block; width: min(15rem, 72%); height: auto; }
+.stack { display: block; width: min(18.75rem, 76%); height: auto; }
 
 @media (max-width: 40rem) {
   .intro { position: relative; display: block; padding: 2.75rem 0 2.25rem; }
