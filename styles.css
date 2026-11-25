@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("./assets/instrument-serif.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  --background: #141615;
+  --text: #f1f0e9;
+  --secondary: #bbbbaf;
+  --line: #353832;
+  --accent: #d3dea9;
+  --display: "Instrument Serif", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font: 400 1rem/1.6 "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  width: min(65rem, calc(100% - clamp(2.5rem, 10vw, 8rem)));
+  margin-inline: auto;
+}
+
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+::selection { color: #141615; background: #d3dea9; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, .features h3 { font-family: var(--display); font-weight: 400; }
+p { color: var(--secondary); }
+strong { color: var(--text); font-weight: 550; }
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(2rem, 7vw, 7rem);
+  padding: clamp(3.5rem, 7vw, 6.25rem) 0 clamp(2.75rem, 5vw, 4.5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+h1 { font-size: clamp(4rem, 8.5vw, 7rem); line-height: .98; letter-spacing: -.035em; }
+.intro p { max-width: 62ch; margin-top: 1.5rem; font-size: clamp(1rem, 1.45vw, 1.125rem); }
+.portrait { width: clamp(6rem, 13vw, 10rem); height: auto; border-radius: 50%; }
+
+h2 { margin: 2rem 0 1.25rem; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.12; }
+.features { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 3.5vw, 2.75rem); }
+.preview {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: .4rem;
+  aspect-ratio: 1.95;
+}
+
+.preview img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.daedlo-preview { background: #21352b; }
+.daedlo-preview > img:first-child { object-position: 50% 45%; }
+.preview .save-screen { position: absolute; inset: 0; object-fit: contain; background: #20332b; opacity: 0; }
+.runtime-preview { background: #101e22; }
+.runtime-preview img { object-fit: contain; }
+@media (hover: hover) {
+  .daedlo-preview:hover .save-screen { opacity: 1; }
+}
+.daedlo-preview:focus-visible .save-screen { opacity: 1; }
+
+.project-title, footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.project-title { margin: .95rem 0 .4rem; }
+.features h3 { font-size: 2rem; line-height: 1.12; }
+h3 a { text-decoration: none; }
+h3 a:hover, h3 a:focus-visible { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
+.source { color: var(--accent); font-size: .875rem; text-decoration-thickness: 1px; text-underline-offset: .22em; }
+.source:hover { color: var(--text); }
+
+.tools { list-style: none; margin: clamp(2.5rem, 5vw, 4rem) 0 0; padding: 0; }
+.tools li { display: grid; grid-template-columns: minmax(9rem, 1fr) 3fr; gap: 1.5rem; padding: 1.15rem 0; border-top: 1px solid var(--line); }
+.tools h3 { font-size: 1.05rem; font-weight: 550; }
+.tools p { max-width: 66ch; }
+code { font-family: ui-monospace, monospace; font-size: .9em; color: var(--text); }
+
+footer { border-top: 1px solid var(--line); padding: 1.75rem 0 2.75rem; }
+.stack { display: block; width: min(15rem, 72%); height: auto; }
+
+@media (max-width: 40rem) {
+  .intro { position: relative; display: block; padding: 2.75rem 0 2.25rem; }
+  h1 { padding-right: 4.1rem; font-size: clamp(3.2rem, 11.7vw, 4.5rem); }
+  .portrait { position: absolute; top: 2.65rem; right: 0; width: 3.5rem; }
+  .intro p { margin-top: 1.25rem; }
+  h2 { margin: 1.65rem 0 1rem; }
+  .features { grid-template-columns: 1fr; gap: 2rem; }
+  .project-title { margin-top: .75rem; }
+  .tools li { grid-template-columns: 1fr; gap: .2rem; padding: 1rem 0; }
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#141615">
+  <meta name="description" content="I design backend systems and APIs for healthcare and worker benefits at Workers Benefit Fund. Outside work, I build open-source tools for testing APIs, debugging browser requests, and tracing services at runtime.">
+  <title>Aidin Givtaj · Selected projects</title>
+  <link rel="icon" href="./assets/aidin.jpg" type="image/jpeg">
+  <link rel="preload" href="./assets/instrument-serif.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <div>
+        <h1>Aidin Givtaj</h1>
+        <p>I design <strong>backend systems and APIs</strong> for healthcare and worker benefits at <strong>Workers Benefit Fund</strong>. Outside work, I build open-source tools for testing APIs, debugging browser requests, and tracing services at runtime. I also build interactive lessons that help developers see how software works under the hood.</p>
+      </div>
+      <img class="portrait" src="./assets/aidin.jpg" width="320" height="320" alt="">
+    </header>
+
+    <section aria-labelledby="projects">
+      <h2 id="projects">Selected projects</h2>
+      <div class="features">
+        <article>
+          <a class="preview daedlo-preview" href="https://daedlo.com/demo.html#roots-recording" aria-label="View the Daedlo save-flow demo">
+            <img src="./assets/daedlo.webp" width="1344" height="896" alt="">
+            <img class="save-screen" src="./assets/daedlo-save.png" width="1440" height="900" alt="">
+          </a>
+          <div class="project-title">
+            <h3><a href="https://daedlo.com/">Daedlo</a></h3>
+            <a class="source" href="https://github.com/givtaj/daedlo" aria-label="Daedlo on GitHub">GitHub</a>
+          </div>
+          <p>Model a user flow in Rust, run it locally with Playwright, and inspect the evidence that an action worked, down to whether a save actually persisted.</p>
+        </article>
+        <article>
+          <a class="preview runtime-preview" href="https://seeruntime.com/#v=1&amp;model=node&amp;scenario=io" aria-label="Open the Node.js I/O lesson in SeeRunTime">
+            <img src="./assets/seeruntime.svg" width="400" height="268" alt="">
+          </a>
+          <div class="project-title">
+            <h3><a href="https://seeruntime.com/">SeeRunTime</a></h3>
+          </div>
+          <p>Step through interactive 3D lessons to see how the Node.js event loop handles callbacks or how Rust’s Tokio runtime schedules tasks.</p>
+        </article>
+      </div>
+
+      <ul class="tools">
+        <li>
+          <h3><a href="https://github.com/givtaj/sleepapi">SleepAPI</a></h3>
+          <p>Give an HTTP client slow responses, dropped connections, or two <code>503</code>s followed by a <code>200</code> to see how its timeouts and retries behave.</p>
+        </li>
+        <li>
+          <h3><a href="https://github.com/givtaj/rusta-pitest">rusta-pitest</a></h3>
+          <p>Check HTTP endpoints from the command line and measure latency and throughput under concurrent load.</p>
+        </li>
+        <li>
+          <h3><a href="https://github.com/givtaj/stoplight">Stoplight</a></h3>
+          <p>Pause an outgoing API request in a Chrome tab, inspect or edit its headers and body, then let it continue.</p>
+        </li>
+        <li>
+          <h3><a href="https://github.com/givtaj/ebpf-tracker">ebpf-tracker</a></h3>
+          <p>Capture Linux system calls from a Rust service running in Docker, then replay the trace to inspect file opens and connection attempts.</p>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <img class="stack" src="./assets/technologies.svg" width="442" height="48" alt="Rust, TypeScript, Node.js, Docker, PostgreSQL, Kubernetes, MongoDB, and GraphQL">
+      <a class="source" href="https://github.com/givtaj" aria-label="Aidin Givtaj on GitHub">GitHub</a>
+    </footer>
+  </main>
+</body>
+</html>
