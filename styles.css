@@ -64,8 +64,8 @@ h2 { margin: 2rem 0 1.25rem; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 
 }
 
 .preview img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.daedlo-preview { background: #21352b; }
-.daedlo-preview > img:first-child { object-position: 50% 45%; }
+.daedlo-preview { background: #faecd9; }
+.daedlo-preview > img:first-child { object-fit: contain; padding: 2%; }
 .preview .save-screen { position: absolute; inset: 0; object-fit: contain; background: #20332b; opacity: 0; }
 .lesson-link { display: block; text-decoration: none; }
 .lesson-link:is(:hover, :focus-visible) h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
