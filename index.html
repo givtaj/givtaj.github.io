@@ -55,20 +55,25 @@
           </div>
         </div>
         <p>Pause an outgoing API request in a Chrome tab, inspect or edit its headers and body, then let it continue.</p>
-        <div class="stoplight-comparison">
-          <figure>
-            <a href="./assets/stoplight-before.jpg">
-              <img src="./assets/stoplight-before.jpg" width="2400" height="1882" loading="lazy" alt="TestYard’s form says “Red light — original.” The Stoplight side panel holds the save request with “Green light — edited in Stoplight” in its JSON body.">
-            </a>
-            <figcaption><strong>Before sending</strong> The form says “Red light.” In Stoplight, the paused request says “Green light.”</figcaption>
-          </figure>
-          <figure>
-            <a href="./assets/stoplight-after.jpg">
-              <img src="./assets/stoplight-after.jpg" width="2400" height="1882" loading="lazy" alt="TestYard lists the saved note “Green light — edited in Stoplight.” The Stoplight side panel is detached and its queue is empty.">
-            </a>
-            <figcaption><strong>After reload</strong> With Stoplight detached, TestYard still shows the saved “Green light” note.</figcaption>
-          </figure>
+        <div class="stoplight-gallery">
+          <a href="./assets/stoplight-edit.png">
+            <img src="./assets/stoplight-edit.png" width="1280" height="800" loading="lazy" alt="Pause and edit API requests. Stoplight shows the JSON body of a paused PATCH request and the Continue Edited button.">
+          </a>
+          <a href="./assets/stoplight-arm.png">
+            <img src="./assets/stoplight-arm.png" width="1280" height="800" loading="lazy" alt="Arm one browser tab. Stoplight shows the target site, the Arm Current Tab button, and an empty request queue.">
+          </a>
         </div>
+        <details class="stoplight-demo">
+          <summary>Red light / Green light demo</summary>
+          <picture>
+            <source media="(max-width: 40rem)" srcset="./assets/stoplight-demo-mobile.png" width="840" height="1518">
+            <img src="./assets/stoplight-demo.png" width="1530" height="860" loading="lazy" alt="The TestYard form says Red light. Stoplight changes the title to Green light in the paused save request. After reload, TestYard shows the saved Green light note.">
+          </picture>
+          <div class="stoplight-links">
+            <a class="source" href="./assets/stoplight-before.jpg">Full screenshot of the edit</a>
+            <a class="source" href="./assets/stoplight-after.jpg">Saved note after reload</a>
+          </div>
+        </details>
       </article>
 
       <ul class="tools">

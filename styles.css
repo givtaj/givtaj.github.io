@@ -53,7 +53,7 @@ h1 { font-size: clamp(4rem, 8.5vw, 7rem); line-height: .98; letter-spacing: -.03
 .portrait { width: clamp(6rem, 13vw, 10rem); height: auto; border-radius: 50%; }
 
 h2 { margin: 2rem 0 1.25rem; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.12; }
-.features, .stoplight-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 3.5vw, 2.75rem); }
+.features, .stoplight-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 3.5vw, 2.75rem); }
 .preview {
   display: block;
   position: relative;
@@ -88,12 +88,13 @@ h3 a:hover, h3 a:focus-visible { text-decoration: underline; text-decoration-thi
 .stoplight-heading, .stoplight-links { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem 1.25rem; }
 .stoplight-heading { justify-content: space-between; margin-bottom: .45rem; }
 .stoplight-feature > p { max-width: 66ch; }
-.stoplight-comparison { margin-top: 1.25rem; }
-.stoplight-comparison figure { margin: 0; }
-.stoplight-comparison a { display: block; border-radius: .4rem; cursor: zoom-in; }
-.stoplight-comparison img { display: block; width: 100%; height: auto; border-radius: inherit; }
-.stoplight-comparison figcaption { margin-top: .65rem; font-size: .9375rem; color: var(--secondary); }
-.stoplight-comparison figcaption strong { display: block; }
+.stoplight-gallery { margin-top: 1.25rem; }
+.stoplight-gallery a { display: block; border-radius: .4rem; cursor: zoom-in; }
+.stoplight-gallery img, .stoplight-demo img { display: block; width: 100%; height: auto; border-radius: .4rem; }
+.stoplight-demo { margin-top: 1rem; }
+.stoplight-demo summary { width: fit-content; cursor: pointer; color: var(--accent); }
+.stoplight-demo summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.stoplight-demo picture { display: block; max-width: 52rem; margin: 1rem 0 .75rem; }
 
 .tools { list-style: none; margin: clamp(2.5rem, 5vw, 4rem) 0 0; padding: 0; }
 .tools li { display: grid; grid-template-columns: minmax(9rem, 1fr) 3fr; gap: 1.5rem; padding: 1.15rem 0; border-top: 1px solid var(--line); }
@@ -110,7 +111,8 @@ footer { border-top: 1px solid var(--line); padding: 1.75rem 0 2.75rem; }
   .portrait { position: absolute; top: 2.65rem; right: 0; width: 3.5rem; }
   .intro p { margin-top: 1.25rem; }
   h2 { margin: 1.65rem 0 1rem; }
-  .features, .stoplight-comparison { grid-template-columns: 1fr; gap: 2rem; }
+  .features, .stoplight-gallery { grid-template-columns: 1fr; gap: 2rem; }
+  .stoplight-gallery { gap: 1rem; }
   .project-title { margin-top: .75rem; }
   .tools li { grid-template-columns: 1fr; gap: .2rem; padding: 1rem 0; }
 }
