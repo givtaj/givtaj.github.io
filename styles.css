@@ -90,11 +90,7 @@ h3 a:hover, h3 a:focus-visible { text-decoration: underline; text-decoration-thi
 .stoplight-feature > p { max-width: 66ch; }
 .stoplight-gallery { margin-top: 1.25rem; }
 .stoplight-gallery a { display: block; border-radius: .4rem; cursor: zoom-in; }
-.stoplight-gallery img, .stoplight-demo img { display: block; width: 100%; height: auto; border-radius: .4rem; }
-.stoplight-demo { margin-top: 1rem; }
-.stoplight-demo summary { width: fit-content; cursor: pointer; color: var(--accent); }
-.stoplight-demo summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-.stoplight-demo picture { display: block; max-width: 52rem; margin: 1rem 0 .75rem; }
+.stoplight-gallery img { display: block; width: 100%; height: auto; border-radius: .4rem; }
 
 .tools { list-style: none; margin: clamp(2.5rem, 5vw, 4rem) 0 0; padding: 0; }
 .tools li { display: grid; grid-template-columns: minmax(9rem, 1fr) 3fr; gap: 1.5rem; padding: 1.15rem 0; border-top: 1px solid var(--line); }
